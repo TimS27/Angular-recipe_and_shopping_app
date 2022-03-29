@@ -28,6 +28,10 @@ export class RecipesService {
     return this.recipes.slice(); //so only copy of recipes array can be accessed
   }
 
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
   }
