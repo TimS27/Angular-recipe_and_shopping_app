@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+
 import { Recipe } from './recipes.model';
 import { Ingredient } from '../shared/ingredient.model';
+
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
-import { Subject } from 'rxjs';
 
 @Injectable()
 export class RecipesService {
@@ -24,6 +26,11 @@ export class RecipesService {
   ];
 
   constructor(private shoppingListService: ShoppingListService) {}
+
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+  }
 
   getRecipes() {
     return this.recipes.slice(); //so only copy of recipes array can be accessed
