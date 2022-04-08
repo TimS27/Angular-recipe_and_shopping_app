@@ -20,6 +20,7 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipesService } from './recipes/recipes.service';
 
 import { DropdownDirective } from './shared/dropdown.directive';
+import { LoadingSpinnerComponent } from './shared/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DropdownDirective } from './shared/dropdown.directive';
     RecipeStartComponent,
     RecipeEditComponent,
     AuthComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
