@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { catchError, tap } from 'rxjs/operators';
-import { Subject, throwError } from 'rxjs';
+import { BehaviorSubject, throwError } from 'rxjs';
 
 import { User } from './user.model';
 
@@ -20,7 +20,9 @@ export interface AuthResponseData {
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  user = new Subject<User>();
+  //Subject: allows to retrieve data through subscribtion, whenever next is triggered
+  //BehaviorSubject: also grants access to data from previous next call: here user data on previous login
+  user = new BehaviorSubject<User>(null);
 
   signup(email: string, password: string) {
     return this.http
