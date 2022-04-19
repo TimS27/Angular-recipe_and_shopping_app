@@ -8,7 +8,6 @@ import { SharedModule } from './shared/shared.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
-import { ShoppingListService } from './shopping-list/shopping-list.service';
 import { RecipesService } from './recipes/recipes.service';
 import { AuthInterceptorService } from './auth/auth-interceptor.service';
 
@@ -17,7 +16,6 @@ import { AuthInterceptorService } from './auth/auth-interceptor.service';
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, SharedModule],
   // providers may be outsourced to CoreModule
   providers: [
-    ShoppingListService,
     RecipesService,
     {
       provide: HTTP_INTERCEPTORS,
