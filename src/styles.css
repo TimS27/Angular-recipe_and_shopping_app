@@ -5,7 +5,8 @@ body {
 body.dark-theme {
   --text-color: #eee;
   --bkg-color: #252222;
-  --li-text-color: rgb(66, 66, 66);
+  --li-text-color: rgb(54, 54, 54);
+  --lighter-bkg-color: rgb(114, 114, 114);
 }
 
 body {
@@ -22,6 +23,14 @@ li {
   color: var(--li-text-color);
 }
 
+li.toggleable {
+  background-color: var(--lighter-bkg-color);
+}
+
 p.special-color {
   color: var(--li-text-color);
+}
+
+a.toggleable {
+  background-color: var(--lighter-bkg-color);
 }

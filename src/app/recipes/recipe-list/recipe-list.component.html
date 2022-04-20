@@ -8,6 +8,10 @@
 
 <div class="row">
   <div class="col-xs-12">
+    <p *ngIf="recipes.length === 0">
+      You can fetch recipes from the database by using the manage menu of the
+      header.
+    </p>
     <app-recipe-item
       *ngFor="let recipeEl of recipes; let i = index"
       [recipe]="recipeEl"
