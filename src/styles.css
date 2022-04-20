@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  --text-color: #222;
+  --bkg-color: #fff;
+}
+body.dark-theme {
+  --text-color: #eee;
+  --bkg-color: #252222;
+  --li-text-color: rgb(66, 66, 66);
+}
+
+body {
+  background: var(--bkg-color);
+  color: var(--text-color);
+}
+
+h1,
+p {
+  color: var(--text-color);
+}
+
+li {
+  color: var(--li-text-color);
+}
+
+p.special-color {
+  color: var(--li-text-color);
+}

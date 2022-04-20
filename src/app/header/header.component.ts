@@ -10,6 +10,7 @@ import { DataStorageService } from '../shared/data-storage.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  darkMode: boolean = false;
   collapsed = true;
   private userSub: Subscription;
   isAuthenticated = false;
@@ -40,5 +41,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   onLogout() {
     this.authService.logout();
+  }
+
+  toggleDarkTheme(): void {
+    this.darkMode = !this.darkMode;
+    document.body.classList.toggle('dark-theme');
   }
 }

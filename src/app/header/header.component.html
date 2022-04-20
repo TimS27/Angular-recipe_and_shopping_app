@@ -43,6 +43,32 @@
             </li>
           </ul>
         </li>
+        <li>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/169/169367.png"
+            alt="sun"
+            style="
+              vertical-align: middle;
+              height: 30px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+            "
+            (click)="toggleDarkTheme()"
+            *ngIf="darkMode"
+          />
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/180/180700.png"
+            alt="moon"
+            style="
+              vertical-align: middle;
+              height: 30px;
+              margin-top: 10px;
+              margin-bottom: 10px;
+            "
+            *ngIf="!darkMode"
+            (click)="toggleDarkTheme()"
+          />
+        </li>
       </ul>
     </div>
   </div>
