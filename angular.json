@@ -18,7 +18,12 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets", "src/favicon.png"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/favicon.png",
+              "src/app/auth/recipe_book_wordart"
+            ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
