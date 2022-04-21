@@ -1,6 +1,6 @@
 # RecipeAndShoppingApp
 
-Recipe and Shopping App learning project focused on functionality.
+Course related Recipe and Shopping App learning project focused on functionality.
 
 Features:
 - single Page Application using Angular Routing
